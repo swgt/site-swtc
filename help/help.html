@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Hygge Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Description">
+        <meta name="author" content="Autor">
+    
+        <!-- loading the css -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        
+		<style type="text/css">
+        body {
+            padding-bottom: 40px;
+        }
+		
+		section {padding: 60px 0 0 0;}
+		
+		.slider-table td {
+			
+		}
+        </style>
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+        <!-- Various Icons (Favicon, Touch Icon,... -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+        
+    </head>
+    
+    
+        
+    <body data-spy="scroll" data-target=".navbar" id="top">
+    
+        <!-- ========================= NAVIGATION BAR >> START ========================= -->
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+                    <a class="brand" href="#overview">Hygge</a><!-- TIP: Change this for the name of your file -->
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#general">General</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#slider">Slider</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ========================= NAVIGATION BAR >> END ========================= -->
+    
+    
+    
+        <!-- ========================= MAIN CONTAINER >> START ========================= -->
+        <div class="container">
+        
+            <!-- ========================= SECTION: OVERVIEW >> START ========================= -->
+            <section id="overview">
+            
+                <div class="hero-unit">
+                    <h1>Hygge Help Documentation</h1>
+                    <p>Yet Another Documentation Crafted with &hearts; by <a href="http://elemisfreebies.com/tf-profile">elemis</a></p>
+                    <p class="well well-small">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email us via our user page contact form or item discussions board.</p>
+                    <div class="row-fluid">
+                        <div class="span3"><a href="http://elemisfreebies.com/tf-profile" class="btn btn-primary btn-large btn-block">Contact Form</a></div>
+                        <div class="span3"><a href="http://elemisfreebies.com/hygge-support" class="btn btn-inverse btn-large btn-block">Item Support</a></div>
+                        <div class="span3"><a href="#changelog" role="button" class="btn btn-success btn-large btn-block" data-toggle="modal">Changelog</a></div>
+                        <div class="span3"><a href="#credits" role="button" class="btn btn-info btn-large btn-block" data-toggle="modal">Credits</a></div>
+                    </div>
+    
+                </div>
+                
+            </section>
+            <!-- ========================= SECTION: OVERVIEW >> END ========================= -->
+
+
+          
+            <!-- ========================= SECTION: GENERAL >> START ========================= -->
+            <section id="general">
+	<div class="page-header">
+	  <h1>General <small>Styles customization and highlights</small></h1>
+	</div>
+	
+	<div class="alert  alert-error"> <a class="close" data-dismiss="alert">×</a> <strong>Warning!</strong> Please note that since some browsers deny local AJAX requests, <strong>Ajax Portfolio</strong> section won't run locally. Please test it on a working web server.</div>
+
+<div class="row">
+      <div class="span3">
+        <h3>Header Height / Scroll Offset</h3>
+        <p>Depending on your logo height, the header height may change and it will effect the scroll offsets. You need to edit both <code>style.css</code> and <code>style/js/scripts.js</code> files. Please measure your header height and if it is different than the original value, replace the values of highlighted areas.</p>
+      </div>
+
+<div class="span9">
+<h4>style.css</h4>
+<pre class="prettyprint linenums">
+.offset {
+	padding-top: <span class="alert-error">81</span>px;
+}
+</pre>
+
+<h4>style/js/scripts.js</h4>
+<pre class="prettyprint linenums">
+/*-----------------------------------------------------------------------------------*/
+/*	SCROLL NAVIGATION HIGHLIGHT
+/*-----------------------------------------------------------------------------------*/
+$(document).ready(function() {
+	headerWrapper		= parseInt($('.navbar').height(), 10);
+    
+    var header_height = $('.navbar').height();
+	var shrinked_header_height = <span class="alert-error">76</span>; /* sticky header height */
+  
+...  
+  
+</pre>
+      </div>
+        </div>
+        
+        
+        
+
+    <hr />
+
+<div class="row">
+                    <div class="span3">
+                        <h3>Header Styles</h3>
+                        <p>There are 3 header options available</p>
+                        
+                    </div>
+                
+                    <div class="span9">
+	                	
+	                	<table class="table table-bordered table-striped">
+	      <thead>
+	        <tr>
+	          <th>File Name</th>
+	          <th>Description</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td><code>header1.html</code></td>
+	          <td>Transparent</td>
+	        </tr>
+	        <tr>
+	          <td><code>header2.html</code></td>
+	          <td>Solid</td>
+	        </tr>
+	        <tr>
+	          <td><code>header3.html</code></td>
+	          <td>Detailed</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	                	
+	                	
+                	</div>
+                </div>  
+         <div class="row">
+
+                    <div class="span3">
+	                    <h3>Menu</h3>
+                        <p>Basic Navigation/Menu Structure:</p>
+        
+        
+        <br />
+        
+        
+                    </div>
+                    <div class="span9">
+                    
+                        <pre class="prettyprint linenums">
+
+      &lt;div class="collapse navbar-collapse"&gt;
+        &lt;ul class="nav navbar-nav"&gt;
+	 <span class="alert-error">&lt;li class="current"&gt;&lt;a href="index.html"&gt;&lt;strong&gt;Single &amp; Current Menu Item&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;</span>
+          &lt;li class="dropdown"&gt;&lt;a href="#" class="dropdown-toggle js-activated"&gt;Menu Item with Dropdown&lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+              &lt;li class="dropdown-submenu"&gt; &lt;a href="#"&gt;Submenu Levels&lt;/a&gt;
+                &lt;ul class="dropdown-menu"&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Second Level&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class="dropdown-submenu"&gt; &lt;a href="#"&gt;More&lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="#"&gt;Third Level&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Second Level&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Second Level&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;!-- /.navbar-nav --&gt; 
+      &lt;/div&gt;
+      &lt;!-- /.navbar-collapse --&gt; 
+</pre>
+                    </div>
+                    
+                    
+                   
+                    
+                </div>
+        
+        
+
+    <hr />
+
+    <div id="retina" class="row">
+      <div class="span3">
+        <h3>Retina Images</h3>
+        <p>In order to display a high resolution image on devices with retina display, you need two versions of the image. One with regular size and another with twice its size. The high resolution one should have the exact same name with <strong>@2x</strong> at the end.
+        
+
+        
+        
+      </div>
+
+<div class="span9">
+<table class="table table-bordered table-striped">
+	      <thead>
+	        <tr>
+	          <th>File Name</th>
+	          <th>Description</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td><code>logo.png</code></td>
+	          <td>Default logo (e.g.: 100x100px)</td>
+	        </tr>
+	        <tr>
+	          <td><code>logo@2x.png</code></td>
+	          <td>High resolution logo (e.g.: 200x200px)</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	    
+	    
+	    <h4>Usage:</h4>
+
+        
+       <pre class="prettyprint linenums">&lt;img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" class="logo-light" alt="" /&gt;
+&lt;img src="#" srcset="style/images/logo-dark.png 1x, style/images/logo-dark@2x.png 2x" class="logo-dark" alt="" /&gt;</pre>
+	    
+      </div>
+        </div>
+ 
+    
+        
+        
+
+    <hr />
+
+
+        
+<div class="row">
+    <div class="span3">
+  <h3>Social Icons <small>(Complete List)</small></h3>
+  <p>The list of all available styled social icons to use in the footer or any other place.</p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;ul class="social"&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-rss"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-dribbble"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-pinterest"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-flickr"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-vimeo"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-youtube"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-skype"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-tumblr"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-behance"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-github"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-delicious"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-500px"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-grooveshark"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-forrst"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-digg"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-blogger"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-klout"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-dropbox"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-songkick"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-posterous"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-appnet"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-gplus"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-stumbleupon"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-lastfm"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-spotify"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-instagram"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-evernote"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-paypal"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-picasa"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-s-soundcloud"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      </div>
+        </div>
+        
+        
+<hr />
+        
+        <div class="row">
+    <div class="span3">
+    <h3>Color Scheme</h3>
+	    <p>There are 10 color options: <code>blue</code>, <code>brown</code>, <code>green</code>, <code>lime</code>, <code>navy</code>, <code>orange</code>, <code>pink</code>, <code>purple</code>, <code>red</code> and <code>yellow</code> the default being green. To change the default color scheme you will have to edit the color css file name in each HTML page.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+&lt;link href="style/css/color/<span class="alert-error">green</span>.css" rel="stylesheet"&gt;
+</pre>
+	</div>
+    
+    </div>
+        
+        
+        
+        
+        
+        
+        
+        <hr />
+
+        
+<div class="row">
+      <div class="span3">
+        <h3>Parallax Effect</h3>
+        <p>The basic structure of the sections that have the parallax effect.</p>
+      </div>
+
+<div class="span9">
+<h4>HTML</h4>
+<pre class="prettyprint linenums">
+&lt;div class="parallax parallax1"&gt;
+  &lt;div class="container inner"&gt;
+    Parallax Content
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+</div>
+        </div>
+        
+        
+        <br />
+        
+        <div class="row">
+      <div class="span3">
+        <p>Each parallax section should have a specific class/id so you can apply different background images in <code>style.css</code>.</p>
+      </div>
+
+<div class="span9">
+<h4>style.css</h4>
+<pre class="prettyprint linenums">
+<span class="alert-error">.parallax1</span> {
+	background-image: url(style/images/art/parallax1.jpg);
+}
+</pre>
+
+</div>
+        </div>
+
+
+      
+
+    <hr />
+ 
+
+	   
+	   <div class="row">
+    <div class="span3">
+    <h3>Contact Form</h3>
+	    <p>Update <code>contact/vanilla-form.php</code> and point recipients e-mail address by editing TO_EMAIL constant. On to these email address all form inquires/messages will be send.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+// If is not empty it sets a header From in e-mail message (sets sender e-mail).
+    // Note: some hosting servers can block sending e-mails with custom From field in header.
+    //       If so, leave this field as empty.
+    define('FROM_EMAIL', '');
+
+    // Recipient's e-mail. To this e-mail messages will be sent.
+    // e.g.: john@example.com
+    // multiple recipients e.g.: john@example.com, andy@example.com
+    <span class="alert-error">define('TO_EMAIL', 'john@example.com');</span></pre>
+	</div>
+	   </div>
+	   
+	   <br />
+    
+    <div class="row">
+    <div class="span3">
+	    Checkbox Example:
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+&lt;label&gt;
+	&lt;input type="checkbox" name="example" value="true" required="required"&gt;
+	&lt;span&gt;&lt;!-- fake checkbox --&gt;&lt;/span&gt;
+	&lt;span class="wrapped-label"&gt;Checkbox Example&lt;/span&gt;
+&lt;/label&gt;</pre>
+	</div>
+    
+    </div>
+
+    
+    
+
+<hr />
+
+  
+  <div class="row">
+    <div class="span3">
+    <h3>Changing Fonts</h3>
+	    <p>If you would like to use a different font, copy the font link in Google Fonts page and paste it before closing head tag in your HTML files.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+&lt;link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'&gt;
+</pre>
+	</div>
+    
+    </div>
+    <br />
+    <div class="row">
+    <div class="span3">
+	    <p>Then you need to add the font name to your CSS styles.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+body {
+    font-family: 'Lato', sans-serif;
+}
+</pre>
+	</div>
+    
+    </div>
+
+<hr />
+
+<div class="row">
+    <div class="span12">
+    <h3>Newsletter</h3>
+	    <p>The template is compatible with Mailchimp Newsletter.</p>
+
+ <p>You can create your own custom newsletter form through <code>Lists - Create a List - Signup Forms - Embedded Forms</code> in Mailchimp website. Replacing the form action with the one in your generated newsletter code should be enough to personalize the existing forms in the template.</p>
+	</div>
+    
+    </div>  
+
+<hr />
+  
+  <div class="row">
+    <div class="span3">
+    <h3>Changing Fonts</h3>
+	    <p>If you would like to use different Google Fonts, copy the font link in Google Fonts page and paste it before closing head tag in your HTML files.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+&lt;link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'&gt;
+</pre>
+	</div>
+    
+    </div>
+    <br />
+    <div class="row">
+    <div class="span3">
+	    <p>Then you need to add the font name to your CSS styles.</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+body {
+    font-family: 'Raleway', sans-serif;
+}
+</pre>
+	</div>
+    
+    </div>
+
+
+        
+        <hr />               
+  
+ 
+        
+   <div class="row">
+    <div class="span3">
+    <h3>Google Map</h3>
+	    <p>Google Map is generated using <a href="http://googlemapbuilder.mynameisdonald.com/">Google Map Builder</a>.</p><p> If you like how the map in the template looks, all you have to do is changing the highlighted values on the right (Latitude,Latitude and address)</p>
+	</div>
+	
+	<div class="span9">
+		<pre class="prettyprint linenums">
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1xdEVYy8IZdBKJGQp_QpDWaNQT7ZHGhY&amp;sensor=false&amp;extension=.js"&gt;&lt;/script&gt; 
+    &lt;script&gt; google.maps.event.addDomListener(window, 'load', init);
+var map;
+function init() {
+    var mapOptions = {
+        center: new google.maps.LatLng(<span class="alert-error">51.211215, 3.226287</span>),
+        zoom: 15,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.DEFAULT,
+        },
+        disableDoubleClickZoom: false,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+        },
+        scaleControl: true,
+        scrollwheel: false,
+        streetViewControl: true,
+        draggable : true,
+        overviewMapControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		styles: [{stylers:[{saturation:-100},{gamma:1}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:50},{gamma:0},{hue:"#50a5d1"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{color:"#333333"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{weight:0.5},{color:"#333333"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{gamma:1},{saturation:50}]}]
+		}
+
+    var mapElement = document.getElementById('map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var locations = [
+        ['<span class="alert-info">Boudewijn Ostenstraat 2</span>', <span class="alert-error">51.211215, 3.226287</span>]
+    ];
+    for (i = 0; i &lt; locations.length; i++) {
+        marker = new google.maps.Marker({
+            icon: 'style/images/map-pin.png',
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
+    }
+}
+&lt;/script&gt; 
+</pre>
+	</div>
+    
+    </div>
+    
+<hr />
+        <div class="row">
+    <div class="span12">
+        <h3>Owl Carousel</h3>
+                        <p> Carousels and portfolio sliders are all created using Owl Carousel. You can change the carousel settings in <code>style/js/scripts.js</code> under "OWL CAROUSEL". Detailed information and options can be found in <a href="http://www.owlcarousel.owlgraphic.com">http://www.owlcarousel.owlgraphic.com</a> </p>
+  </div>
+   </div>
+   
+   <hr />
+   
+    <div class="row">
+	
+      
+            
+               <div class="span12"> 
+
+        <h3>Instagram Feed</h3>
+                        <p>To fetch your own shots in Instagram carousel, you will need to edit the "userId" and "accessToken" values entered in <code>style/js/scripts.js</code> under "INSTAGRAM" </p> 
+                        
+                        <p>Don't know your user id or token? <a href="https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&redirect_uri=http://instafeedjs.com&response_type=token">Click here</a> to get one. </p> 
+
+     </div>
+    </div>
+    
+    <hr />
+   
+    <div class="row">
+	
+      
+            
+               <div class="span12"> 
+
+        <h3>Share Bar Usage</h3>
+                        <p>With the Share Bar you can share your content to multiple social networks from one place. You can add/remove social networks in <code>style/js/scripts.js</code>. The complete list of social networks are as follows:</p>
+                        
+                        <pre>
+	                        
+	                        
+$('#share-bar').share({
+        networks: ['twitter', 'facebook', 'tumblr', 'pinterest', 'googleplus', 'email', 'linkedin', 'digg', 'posterous', 'stumbleupon'],
+        orientation: 'vertical',
+        affix: 'right center'
+});
+                        </pre>
+
+     </div>
+    </div>
+   
+  </section> <!-- General -->
+            <!-- ========================= SECTION: GENERAL >> END ========================= -->
+            <hr />
+
+            
+            
+           
+            
+            <!-- ========================= SECTION: PORTFOLIO >> START ========================= -->
+            <section id="portfolio">
+            
+                <div class="page-header">
+                    <h1>Portfolio <small>Customization of portfolio</small></h1>
+                </div>
+                
+     
+                
+                <div class="row">
+                    <div class="span3">
+                        <h3>Portfolios</h3>
+                        <p>There are 3 different layouts available for you to choose from.</p>
+                        <p><div class="alert  alert-error"><strong>Warning:</strong> Please note that since some browsers deny local AJAX requests, Load More button won't function locally. Please test it on a working web server.</div></p>
+                    </div>
+                
+                    <div class="span9">
+	                	
+	                	<table class="table table-bordered table-striped">
+	      <thead>
+	        <tr>
+	          <th>File Name</th>
+	          <th>Description</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td><code>portfolio.html</code></td>
+	          <td>Classic Portfolio</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio2.html</code></td>
+	          <td>AJAX Portfolio - Top</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio3.html</code></td>
+	          <td>AJAX Portfolio - Middle</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	                	
+	                	
+                	</div>
+                </div>  
+                   <br /> <br />
+                 <div class="row">
+                	<div class="span12">
+	                	<h3>Portfolio Load More</h3>
+	                	<p>Portfolios have "load more" option available. You need to insert the item lists inside <code>&lt;div class="cbp-loadMore-block1"&gt;</code> in a new html page. </p>
+	                	<p><strong>Classic Portfolio</strong> load more example can be found in: <code>ajax/portfolio-more.html</code></p>
+						<p><strong>AJAX Portfolio - Top</strong> load more example can be found in: <code>ajax/portfolio-more2.html</code></p>
+						<p><strong>AJAX Portfolio - Below</strong> load more example can be found in: <code>ajax/portfolio-more3.html</code></p>
+                	</div>
+                	
+                </div>
+                
+                <br /> <br />
+                
+                <div class="row">
+                	<div class="span3">
+	                	<h3>Portfolio Post Layouts</h3>
+	                	<p>There are 7 different layouts available for you to choose from. Of course, you can mix and/or alter these and create your own layouts.</p>
+                	</div>
+                	<div class="span9">
+	                	
+	                	<table class="table table-bordered table-striped">
+	      <thead>
+	        <tr>
+	          <th>File Name</th>
+	          <th>Description</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td><code>portfolio-post.html</code></td>
+	          <td>Portfolio Post with Images</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post2.html</code></td>
+	          <td>Portfolio Post with Half Images</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post3.html</code></td>
+	          <td>Portfolio Post with Half Slider</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post4.html</code></td>
+	          <td>Portfolio Post with Fullwidth Slider</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post5.html</code></td>
+	          <td>Portfolio Post with Video</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post6.html</code></td>
+	          <td>Portfolio Post with Half Video</td>
+	        </tr>
+	        <tr>
+	          <td><code>portfolio-post7.html</code></td>
+	          <td>Portfolio Post with Parallax</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	                	
+	                	
+                	</div>
+                </div>
+       
+                
+                <hr />     
+                
+            </section>
+            <!-- ========================= SECTION: PORTFOLIO >> END ========================= -->
+            
+            <!-- ========================= SECTION: SLIDER >> START ========================= -->
+            <section id="slider">
+                <div class="page-header">
+                    <h1>Revolution Slider <small>Slider customization and highlights</small></h1>
+                </div>
+            
+               
+            
+                
+                <h3>Slider Elements and Options</h3>
+                        <p>You can find detailed information about revolution slider elements and options in <code>help/slider-help</code> file in the template package.</p>
+
+
+                
+               
+            </section>
+            <!-- ========================= SECTION: SLIDER >> END ========================= -->
+            
+           
+            
+            
+
+<hr />
+
+    
+            
+    
+            <div class="goodbye">
+                <p>Once again, thank you so much for purchasing this theme. As said at the beginning, we'd be glad to help you if you have any questions relating to this theme. No guarantees, but we'll do our best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+            </div>
+        
+            <hr />
+        
+            <footer>
+                <p>&copy; elemis 2015</p>
+            </footer>
+            
+        </div>
+        <!-- ========================= MAIN CONTAINER >> END ========================= -->
+         
+        
+        <!-- CHANGELOG >> START -->
+        <div class="modal hide fade" id="changelog" tabindex="-1" role="dialog" aria-labelledby="changelog-label" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="changelog-label">Changelog</h3>
+            </div>
+            <div class="modal-body">
+            
+<!-- Code Block >> Start -->                   
+<pre>
+<strong>v1.0.2 (27 Aug 15)</strong>
+- FIXED: Not found error for cbp-loading.gif
+
+<strong>v1.0.1 (26 Aug 15)</strong>
+- FIXED: A bug in "Scroll Navigation Highlight" in scripts.js. <br />Now you can combine onepage with detailed header.
+
+<strong>v1.0 (24 Jul 15)</strong>
+- Initial release
+</pre>
+<!-- Code Block >> End -->                
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+        <!-- CHANGELOG >> END -->
+        
+        
+        
+        <!-- CREDITS >> START -->
+        <div class="modal hide fade" id="credits" tabindex="-1" role="dialog" aria-labelledby="credits-label" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="credits-label">Credits</h3>
+            </div>
+            <div class="modal-body">
+                <h3>JavaScript</h3>
+                <ol>
+                    <li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+                    <li><a href="https://github.com/CWSpear/twitter-bootstrap-hover-dropdown">Twitter Bootstrap Hover Dropdown</a></li>
+                    <li><a href="http://os.alfajango.com/easytabs/">Easytabs</a></li>
+                    <li><a href="http://fancybox.net/">Fancybox</a></li>
+                    <li><a href="http://fitvidsjs.com/">Fitvids</a></li>
+                    <li><a href="http://isotope.metafizzy.co/">Isotope</a></li>
+                    <li><a href="http://www.owlcarousel.owlgraphic.com">Owl Carousel</a></li>
+                    <li><a href="http://instafeedjs.com">Instafeed</a></li>
+                    <li><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">Revolution Slider</a></li>
+                    <li><a href="http://mynameismatthieu.com/WOW/index.html">wow.js</a></li>
+                    <li><a href="http://codecanyon.net/item/vanilla-form-modern-responsive-contact-form/10447733">Vanilla Form</a></li>
+                    <li><a href="http://scottjehl.github.io/picturefill/">Picturefill</a></li>
+                    <li><a href="https://github.com/iatek/jquery-share">jQuery Share</a></li>
+                    <li><a href="http://codyhouse.co/gem/css-animated-headlines/">Animated Headlines</a></li>
+                    <li><a href="http://www.chartjs.org">Chart.js</a></li>
+                    <li><a href="https://github.com/linnett/backgroundVideo/blob/master/backgroundVideo.min.js">Background Video</a></li>
+                </ol>
+                <h3>Icons</h3>
+                <ol>
+                    <li><a href="http://fontello.com/">Fontello</a></li>
+                    <li><a href="http://www.1001freedownloads.com/free-vector/lulu-icons-set-1">Lulu Icons</a></li>
+                    <li><a href="http://budicon.buditanrim.co">Budicon</a></li>
+                </ol>
+                <h3>Images</h3>
+                <ol>
+                    <li><a href="https://unsplash.com/">https://unsplash.com/</a></li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+        <!-- CREDITS >> END -->
+
+        <!-- loading javascripts -->
+		<script src="assets/js/jquery.js"></script> 
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/google-code-prettify/prettify.js"></script>
+        
+        <!-- init javascripts -->
+        <script src="assets/js/init.js"></script>
+         
+    </body>
+    
+</html>
