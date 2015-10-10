@@ -416,10 +416,10 @@ $(document).ready(function() {
     var instagramFeed = new Instafeed({
         get: 'user',
         limit: 8,
-        userId: 1215763826,
+        userId: 2229886491,
         accessToken: '1215763826.467ede5.aa54392aa9eb46f0b9e7191f7211ec3a',
         resolution: 'low_resolution',
-        template: '<div class="item"><figure><a href="{{link}}"><div class="text-overlay"><div class="info"><span>View</span></div></div><img src="{{image}}" /></a></figure></div>',
+        template: '<div class="item"><figure><a href="{{link}}" target="_blank"><div class="text-overlay"><div class="info"><span>View</span></div></div><img src="{{image}}" /></a></figure></div>',
         after: function() {
             var $portfoliogrid = $('.portfolio-grid .isotope');
             $portfoliogrid.isotope({
